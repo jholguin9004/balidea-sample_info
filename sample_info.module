@@ -1,0 +1,3 @@
+<?php 
+
+const SAMPLE_INFO_CONFIG_KEY = 'sample_info.settings';

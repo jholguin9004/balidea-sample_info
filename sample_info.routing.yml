@@ -1,0 +1,9 @@
+sample_info.settings:
+  path: '/admin/config/system/balidea/sample_info'
+  defaults:
+    _form: '\Drupal\sample_info\Form\ConfigForm'
+    _title: 'Sample Info Settings'
+  requirements:
+    _permission: 'administer balidea sample info'
+  options:
+    _admin_route: TRUE

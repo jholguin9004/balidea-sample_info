@@ -1,0 +1,14 @@
+name: 'Balidea - Sample info'
+type: module
+description: 'Provides a sample form for testing Drupal development skills.'
+version: '1.0'
+package: 'Balidea'
+project: 'sample_info'
+configure: sample_info.settings
+core_version_requirement: ^8.8 || ^9 || ^10
+dependencies:
+  - 'drupal:config_translation'
+  - 'drupal:language'
+  - 'drupal:locale'
+'interface translation project': sample_info
+'interface translation server pattern': modules/custom/%project/translations/%project.%language.po
