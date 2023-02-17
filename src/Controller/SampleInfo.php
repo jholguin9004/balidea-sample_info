@@ -17,9 +17,12 @@ class SampleInfo extends ControllerBase
         $config = $this->config(SAMPLE_INFO_CONFIG_KEY);
         $text = $config->get('info_text');
         return [
-            '#theme' => 'sample-info-view',
-            '#info_text' => $text['value'] ?? '',
-            '#info_text_format' => $text['format'] ?? SAMPLE_INFO_DEFAULT_FORMAT,
+            '#theme' => 'sample_info_view',
+            '#info_text' => [
+                '#type' => 'processed_text',
+                '#text' => $text['value'] ?? '',
+                '#format' => $text['format'] ?? SAMPLE_INFO_DEFAULT_FORMAT,
+            ],
             '#info_integer' => $config->get('info_integer') ?? ''
         ];
     }

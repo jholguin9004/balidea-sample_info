@@ -2,3 +2,17 @@
 
 const SAMPLE_INFO_CONFIG_KEY = 'sample_info.settings';
 const SAMPLE_INFO_DEFAULT_FORMAT = 'full_html';
+
+/**
+ * Implements hook_theme().
+ */
+function sample_info_theme() {
+  return [
+    'sample_info_view' => [
+      'variables' => [
+        'info_text' => NULL,
+        'info_integer' => NULL,
+      ],
+    ],
+  ];
+}
