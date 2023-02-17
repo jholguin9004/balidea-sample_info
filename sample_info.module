@@ -6,7 +6,8 @@ const SAMPLE_INFO_DEFAULT_FORMAT = 'full_html';
 /**
  * Implements hook_theme().
  */
-function sample_info_theme() {
+function sample_info_theme()
+{
   return [
     'sample_info_view' => [
       'variables' => [
@@ -15,4 +16,15 @@ function sample_info_theme() {
       ],
     ],
   ];
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function sample_info_preprocess_html(&$variables)
+{
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->bundle()) {
+    $variables['attributes']['class'][] = "content-type--{$node->bundle()}";
+  }
 }
