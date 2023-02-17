@@ -1,0 +1,4 @@
+sample_info.settings.form_tab:
+  base_route: sample_info.settings
+  title: 'Sample Info Settings'
+  route_name: sample_info.settings

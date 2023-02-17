@@ -1,0 +1,5 @@
+sample_info.settings:
+  title: 'Translation Configuration for Sample Info'
+  base_route_name: sample_info.settings
+  names:
+    - 'sample_info.settings'

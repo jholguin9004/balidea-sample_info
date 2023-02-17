@@ -1,0 +1,6 @@
+sample_info.settings:
+  title: 'Sample Info Settings'
+  route_name: sample_info.settings
+  description: 'Configure Sample Info module'
+  parent: system.admin_config_system
+  weight: 99
