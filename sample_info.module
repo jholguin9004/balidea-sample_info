@@ -1,3 +1,4 @@
 <?php 
 
 const SAMPLE_INFO_CONFIG_KEY = 'sample_info.settings';
+const SAMPLE_INFO_DEFAULT_FORMAT = 'full_html';

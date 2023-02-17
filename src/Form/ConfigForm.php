@@ -42,7 +42,7 @@ class ConfigForm extends ConfigFormBase {
       '#description' => $this->t('Add text you want to show in frontend.'),
       '#default_value' => $text['value'] ?? '',
       '#rows' => 10,
-      '#format' => $text['format'] ?? '',
+      '#format' => $text['format'] ?? SAMPLE_INFO_DEFAULT_FORMAT,
       '#required' =>  true
     ];
 
