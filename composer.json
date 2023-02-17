@@ -1,6 +1,7 @@
 {
   "name": "balidea/sample_info",
   "type": "drupal-custom-module",
+  "version": "1.1",
   "require": {
     "drupal/core": "^8 || ^9"
   },
