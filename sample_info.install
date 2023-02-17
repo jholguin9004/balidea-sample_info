@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Install menu item content.
+ */
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+/**
+ * Implements hook_install().
+ */
+function sample_info_install() {
+  try{
+    $menuItem = MenuLinkContent::create(
+      [
+          'title' => t('Sample info'),
+          'menu_name' => 'main',
+          'link' => [
+              'uri' => 'route:sample_info.view_content'
+          ],
+          'expanded' => true
+      ]
+    );
+    $menuItem->save();
+  }catch(\Exception $e){
+    Drupal::logger('sample_info')->error(
+      "An error has occurred installing the menu item: @error", 
+      [
+        "@error" => $e->getMessage()
+      ]
+    );
+  }
+}
